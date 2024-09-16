@@ -6,7 +6,7 @@ function Home() {
   const [word, setWord] = useState({});
 
   async function fetchWords() {
-    const response = await fetch("http://localhost:3000/words");
+    const response = await fetch("https://hangman-server-5.onrender.com/words");
     const data = await response.json();
 
     const randomIndex = Math.floor(Math.random() * data.length);
